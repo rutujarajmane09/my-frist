@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="form-header">
+            <div class="header-content">
+                <div class="form-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="form-title">
+                    <h1>Student Information Form</h1>
+                    <p>Please fill out all required fields marked with *</p>
+                </div>
+            </div>
+        </header>
+
+        <form id="studentForm" class="form-container">
+            <!-- Personal Information Section -->
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Personal Information
+                </h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth *</label>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Information Section -->
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-book"></i>
+                    Academic Information
+                </h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentId">Student ID *</label>
+                        <input type="text" id="studentId" name="studentId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="grade">Current Grade/Year *</label>
+                        <select id="grade" name="grade" required>
+                            <option value="">Select Grade</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                            <option value="college">College</option>
+                            <option value="university">University</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="school">School/Institution Name *</label>
+                        <input type="text" id="school" name="school" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="major">Major/Field of Study</label>
+                        <input type="text" id="major" name="major">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="gpa">Current GPA</label>
+                    <input type="number" id="gpa" name="gpa" min="0" max="4" step="0.01" placeholder="0.00 - 4.00">
+                </div>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-address-book"></i>
+                    Contact Information
+                </h2>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Enter your full address"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State/Province</label>
+                        <input type="text" id="state" name="state">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="zipCode">ZIP/Postal Code</label>
+                        <input type="text" id="zipCode" name="zipCode">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country" value="United States">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Contact Section -->
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-phone"></i>
+                    Emergency Contact
+                </h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="emergencyName">Emergency Contact Name</label>
+                        <input type="text" id="emergencyName" name="emergencyName">
+                    </div>
+                    <div class="form-group">
+                        <label for="emergencyPhone">Emergency Contact Phone</label>
+                        <input type="tel" id="emergencyPhone" name="emergencyPhone">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="emergencyRelation">Relationship to Student</label>
+                    <input type="text" id="emergencyRelation" name="emergencyRelation" placeholder="e.g., Parent, Guardian, Sibling">
+                </div>
+            </div>
+
+            <!-- Additional Information Section -->
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-info-circle"></i>
+                    Additional Information
+                </h2>
+                
+                <div class="form-group">
+                    <label for="interests">Academic Interests/Hobbies</label>
+                    <textarea id="interests" name="interests" rows="3" placeholder="Describe your academic interests, hobbies, or extracurricular activities"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="goals">Academic/Career Goals</label>
+                    <textarea id="goals" name="goals" rows="3" placeholder="Describe your academic or career goals"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialNeeds">Special Needs or Accommodations</label>
+                    <textarea id="specialNeeds" name="specialNeeds" rows="2" placeholder="Please describe any special needs or accommodations required"></textarea>
+                </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+                <button type="button" id="saveDraft" class="btn btn-secondary">
+                    <i class="fas fa-save"></i>
+                    Save Draft
+                </button>
+                <button type="submit" id="submitForm" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Submit Form
+                </button>
+            </div>
+        </form>
+
+        <!-- Success Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <h3>Form Submitted Successfully!</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you for submitting your information. Your data has been recorded.</p>
+                    <div id="submissionSummary"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closeModal" class="btn btn-primary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
